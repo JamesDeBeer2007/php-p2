@@ -11,28 +11,50 @@
     echo "Hello <b> World </b>!";
     //
 
+echo "<br>";
+echo "<br>";
+
     // 3.1
-    date_default_timezone_set("Europe/Amsterdam");
     
-    $today = date("D j F Y");
+    date_default_timezone_set("Europe/Amsterdam");
+    $today = date("l d F y");
     echo "Vandaag is het: $today";
 
     echo "<br>";
 
-    $time = date("H:i");
-    echo "Het is nu: $time uur";
+    $dayOfYear = date("z");
+    echo "Vandaag is het de $dayOfYear van het jaar.";
 
     echo "<br>";
 
-    $month = date("F");
-    $daysInMonth = date("t");
-    echo "Deze maand, $month heeft $daysInMonth dagen";
+    $dayOfTheWeek = date("l");
+    $dayOfTheWeekNumerical = date("w");
+    echo "$dayOfTheWeek is de $dayOfTheWeekNumerical dag van de week.";
 
     echo "<br>";
 
-    $week = date("W");
-    echo "Deze week is het week: $week";
+    $monthOfTheYear = date("F");
+    $totalDaysInMonth = date("t");
+
+    echo "De maand $monthOfTheYear heeft in totaal $totalDaysInMonth dagen.";
+
+    echo "<br>";
+
+    $year = date("Y");
+    $leapYear = date("L");
+
+    if ($leapYear == 1) {
+        echo "$year is een schrikkeljaar!";
+    } elseif ($leapYear == 0) {
+        echo "$year is geen schrikkeljaar!";
+    } else {
+        echo "Unexpected result from date('L')";
+    }
+
     //
+
+    echo "<br>";
+    echo "<br>";
 
     // 4.1
     date_default_timezone_set("Europe/Amsterdam");
@@ -50,7 +72,7 @@
         echo "Het is Avond";
     } elseif ($time >= 24 && 6 >= $time){
         echo "Het is Nacht";
-    }
+    };
     //
 
     // 4.2
@@ -76,9 +98,9 @@
     echo ($nummer1 * 2 + $nummer2);
    } else {
     echo ($nummer2 * 2 + $nummer1);
-   }
+   };
    echo "<br>";
-    echo $_SERVER['REMOTE_ADDR']
+    echo $_SERVER['REMOTE_ADDR'];
     //
 
     // 4.4
@@ -97,7 +119,7 @@
         $procent = 1.16;
         $price = $priceOld * $procent;
         echo "Oude prijs: $priceOld. na verhoging van $procent is de prijs: $price";
-    }   
+    };
     //
 
     // 4.5
@@ -107,7 +129,7 @@
     } 
     else{ 
         echo "is $number even? Nee";  
-    } 
+    };
     //
 
     // 4.7
@@ -119,7 +141,7 @@
         echo "Je bent niet meer broke, je kan de telefoon kopen van 1k en je hebt dan nog ".($spaargeld-1000)." buck over.";
     }   elseif($spaargeld >= 750){
         echo "Dumbass je mist nog ".(1000-$spaargeld);
-    } 
+    };
     //
 
     // 4.9
@@ -136,7 +158,7 @@
         echo "Kan wel!";
     } else {
         echo "Kan niet !grrr";
-    }
+    };
     //
 
     // 4.10
@@ -147,7 +169,7 @@
     for ($i = 0; $i <= $x; $i++) {
         $antwoord += $i;
         $calc .= ($i != 0) ? " + " . $i : $i;
-    }
+    };
     
     echo " Gekozen getal is: $x";
     echo "<br>";
@@ -170,7 +192,7 @@
     echo "<td>" . ($euro * $yen) . "</td>";
     echo "<td>" . ($euro * $ant) . "</td>";
     echo "</tr>";
-        } 
+        } ;
     echo "</table>";
     //
 
@@ -227,7 +249,7 @@
         case 3: $y = 0;
         case 6: $y = 1;
         default: $y += 01;
-      }
+      };
       echo"y = $y";
     //
 
