@@ -17,12 +17,12 @@ echo "<br>";
     // 3.1
     
     date_default_timezone_set("Europe/Amsterdam");
-    $today = date("l d F y");
+    $today = date("l d F Y");
     echo "Vandaag is het: $today";
 
     echo "<br>";
 
-    $dayOfYear = date("z");
+    $dayOfYear = date("z")+1;
     echo "Vandaag is het de $dayOfYear van het jaar.";
 
     echo "<br>";
@@ -75,6 +75,9 @@ echo "<br>";
     };
     //
 
+    echo"<br>";
+    echo"<br>";
+
     // 4.2
     
    date_default_timezone_set("Europe/Amsterdam"); // time zone
@@ -90,6 +93,9 @@ echo "<br>";
    echo $result; // laat resultaat zien
     //
 
+    echo"<br>";
+    echo"<br>";
+
     // 4.3
    $nummer1 = 10;
    $nummer2 = 20;
@@ -102,6 +108,9 @@ echo "<br>";
    echo "<br>";
     echo $_SERVER['REMOTE_ADDR'];
     //
+
+    echo"<br>";
+    echo"<br>";
 
     // 4.4
     $priceOld = 60;
@@ -122,6 +131,9 @@ echo "<br>";
     };
     //
 
+    echo"<br>";
+    echo"<br>";
+
     // 4.5
     $number = 4;
     if($number % 2 == 0){ 
@@ -131,6 +143,9 @@ echo "<br>";
         echo "is $number even? Nee";  
     };
     //
+
+    echo"<br>";
+    echo"<br>";
 
     // 4.7
     $spaargeld = 750.82;
@@ -143,6 +158,9 @@ echo "<br>";
         echo "Dumbass je mist nog ".(1000-$spaargeld);
     };
     //
+
+    echo"<br>";
+    echo"<br>";
 
     // 4.9
     $a = 5;
@@ -161,6 +179,9 @@ echo "<br>";
     };
     //
 
+    echo"<br>";
+    echo"<br>";
+
     // 4.10
     $x = 12; 
     $antwoord = 0;
@@ -177,6 +198,9 @@ echo "<br>";
     echo "<br>";
     echo "$calc = $antwoord";
     //
+
+    echo"<br>";
+    echo"<br>";
 
     // 4.12
     $dollar = 1.09;
@@ -196,17 +220,26 @@ echo "<br>";
     echo "</table>";
     //
 
+    echo"<br>";
+    echo"<br>";
+
     // 4.14
     // nuh uh
     //
+
+    echo"<br>";echo"<br>";
 
     // 4.15
     // nuh uh
     //
 
+    echo"<br>";echo"<br>";
+
     // 5.1
     echo"het antwoord voor opdracht 1 ( hoofstuk 5, paragraaf 1 ) is A";
     //
+
+    echo"<br>";echo"<br>";
 
     // 5.1
     echo"a = false";echo"<br>";
@@ -218,6 +251,8 @@ echo "<br>";
     echo"g = true";echo"<br>";
     echo"h = false";echo"<br>";    
     //
+
+    echo"<br>";echo"<br>";
 
     // 5.2
     echo"opdracht 2";echo"<br>";
@@ -232,15 +267,21 @@ echo "<br>";
     echo "e = $b\n";echo"<br>";
     //
 
+    echo"<br>";echo"<br>";
+
     // 5.3
     echo"opdracht 3";echo"<br>";
     echo"b,c en d zijn het zelfde";
     //
 
+    echo"<br>";echo"<br>";
+
     // 5.4
     echo"opdracht 4";echo"<br>";
       echo"ja, ze zijn gelijk, omdat ze het zelfed doen";
     //
+
+    echo"<br>";echo"<br>";
 
     // 5.5
     echo"opdracht 5";echo"<br>";
@@ -250,8 +291,11 @@ echo "<br>";
         case 6: $y = 1;
         default: $y += 01;
       };
+      echo"5.2.5 opdracht hier";
       echo"y = $y";
     //
+
+    echo"<br>";echo"<br>";
 
     // 6.1
     session_start(); // start het op
@@ -265,6 +309,8 @@ echo "<br>";
     echo "Je hebt de page " . $_SESSION['bezoekjes']. " keer deze keer gerefreshed"; // laat de resultaat zien
     //
 
+    echo"<br>";echo"<br>";
+
     // 6.2
     if(isset($_COOKIE['bezoekjes'])) {
         $bezoekjes = ++$_COOKIE['bezoekjes'];
@@ -275,6 +321,13 @@ echo "<br>";
     setcookie('bezoekjes', $bezoekjes, time() + 3600 * 24 * 7 * 4 * 12);
     
     echo "Dit jaar heb je deze pagina al: " . $bezoekjes . " keer bekeken"; 
+
+    echo"<br>";
+    $a = 1;
+    $b = 1.0;
+    
+    $a = 4 + 1 + 4 * 5 - (+$a + 1);
+    echo"$a";
     //
     ?>
 </body>
